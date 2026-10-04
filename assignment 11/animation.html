@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 500px;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .square{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        .s6{
+            border: 10px solid white;
+            border-top: 10px solid blue;
+            border-radius: 50%;
+            animation-name: rotate;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .s1{
+            background-color: red;
+            animation-name: colour;
+        }
+        @keyframes colour{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: blue;
+            }   
+        }
+        .s2{
+            animation-name: move;
+            background-color: brown;
+        }
+        @keyframes move {
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(0,50px);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+        .s3{
+            background-color: green;
+            animation-name: rotate;
+        }
+        .s4{
+            background-color: purple;
+            animation-name: pulse;
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .s5{
+            background-color: cadetblue;
+            animation-name: fade;
+        }
+        @keyframes fade{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            animation-name: boxmove;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        .left,.right{
+            height: 80%;
+            width: 40%;
+            border: 1px dashed black;
+        }
+        @keyframes boxmove{
+            0%{
+                transform: translate(0);
+            }
+            25%{
+                transform: translate(435px,0);
+            }
+            50%{
+                transform: translate(435px,300px)
+            }
+            75%{
+                transform: translate(0,300px)
+            }
+            100%{
+                transform: translate(0);    
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            animation-name: google;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier();
+        }
+        @keyframes google{
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(0, 50px);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+        .b1{
+            background-color: greenyellow;
+        }
+        .b2{
+            background-color: red;
+            animation-delay: .3s;
+        }
+        .b3{
+            background-color: plum;
+            animation-delay: .6s;
+        }
+        .b4{
+            background-color: palegreen;
+            animation-delay: .9s;
+        }
+        .b5{
+            background-color: yellow;
+            animation-delay: 1.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Animation</h1>
+    <div class="container">
+        <div class="square s1">Color</div>
+        <div class="square s2">Move</div>
+        <div class="square s3">Rotate</div>
+        <div class="square s4">Pulse</div>
+        <div class="square s5">Fade</div>
+        <div class="square s6"></div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="box"></div>
+        </div>
+        <div class="right">
+            <div class="ball b1"></div>
+            <div class="ball b2"></div>
+            <div class="ball b3"></div>
+            <div class="ball b4"></div>
+            <div class="ball b5"></div>
+        </div>
+    </div>
+</body>
+</html>
